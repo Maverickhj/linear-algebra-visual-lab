@@ -1,0 +1,2 @@
+# Optional development tooling; not needed to read or run the visualizations.
+playwright==1.62.0

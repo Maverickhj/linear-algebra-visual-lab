@@ -1,0 +1,6 @@
+{
+  "title": "向量加法",
+  "dimension": 2,
+  "status": "ready",
+  "reference": "Gilbert Strang, Introduction to Linear Algebra, 5th ed., §1.1, printed p.3, Figure 1.1 (head-to-tail addition and the parallelogram)."
+}

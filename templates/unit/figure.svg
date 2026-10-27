@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">待绘制的静态插图</title>
+  <desc id="desc">此文件是可编辑占位区域，尚未表达数学结论。</desc>
+  <rect width="640" height="480" fill="#ffffff"/>
+  <rect x="24" y="24" width="592" height="432" rx="8" fill="#f6f7f2" stroke="#dce3de" stroke-dasharray="6 6"/>
+  <text x="320" y="232" text-anchor="middle" fill="#172c36" font-family="system-ui,sans-serif" font-size="20">在这里绘制本题的几何关系</text>
+  <text x="320" y="264" text-anchor="middle" fill="#536870" font-family="system-ui,sans-serif" font-size="14">草稿 · 尚未实现</text>
+</svg>

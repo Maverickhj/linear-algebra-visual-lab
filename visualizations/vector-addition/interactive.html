@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="调整两个平面向量，对比首尾相接的路径与合向量。">
+  <title>向量加法 · Linear Algebra Visual Lab</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="model.js"></script>
+  <script defer src="view.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#controls">跳到参数控件</a>
+  <header><a href="../../index.html">← 实验目录</a><span>LINEAR ALGEBRA VISUAL LAB</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">01 / VECTOR ADDITION</p><h1>两段位移，一个终点。</h1><p class="lead">先沿 <i>a</i> 走，再沿 <i>b</i> 走；从原点直接到达终点的箭头，就是它们的和。</p></section>
+    <div class="lab">
+      <section class="panel figure-panel" aria-labelledby="figure-heading">
+        <div class="section-heading"><h2 id="figure-heading">观察几何关系</h2><span class="muted small">二维 · 等比例坐标</span></div>
+        <div class="legend"><span class="a">━ a</span><span class="b">━ b</span><span class="sum">━ a + b</span><span class="muted">┄ 平移副本</span></div>
+        <div id="diagram"></div>
+        <p class="figure-note">比较两条虚线路径：移动箭头的起点，不改变它代表的位移。</p>
+      </section>
+      <section id="controls" class="panel controls" aria-labelledby="controls-heading">
+        <div class="section-heading"><h2 id="controls-heading">改变向量</h2><button id="reset" type="button">恢复默认</button></div>
+        <p class="muted small">每个分量 −3 到 3，步长 0.5。滑块可用方向键调整。</p>
+        <fieldset><legend class="a">向量 a · 蓝色</legend>
+          <div class="parameter"><label for="ax">a 的 x 分量</label><input id="ax-number" type="number" min="-3" max="3" step="0.5" value="2" aria-label="a 的 x 分量数值" aria-describedby="status"><input id="ax" type="range" min="-3" max="3" step="0.5" value="2" aria-describedby="status"></div>
+          <div class="parameter"><label for="ay">a 的 y 分量</label><input id="ay-number" type="number" min="-3" max="3" step="0.5" value="1" aria-label="a 的 y 分量数值" aria-describedby="status"><input id="ay" type="range" min="-3" max="3" step="0.5" value="1" aria-describedby="status"></div>
+        </fieldset>
+        <fieldset><legend class="b">向量 b · 棕色</legend>
+          <div class="parameter"><label for="bx">b 的 x 分量</label><input id="bx-number" type="number" min="-3" max="3" step="0.5" value="1" aria-label="b 的 x 分量数值" aria-describedby="status"><input id="bx" type="range" min="-3" max="3" step="0.5" value="1" aria-describedby="status"></div>
+          <div class="parameter"><label for="by">b 的 y 分量</label><input id="by-number" type="number" min="-3" max="3" step="0.5" value="2" aria-label="b 的 y 分量数值" aria-describedby="status"><input id="by" type="range" min="-3" max="3" step="0.5" value="2" aria-describedby="status"></div>
+        </fieldset>
+        <div class="presets" role="group" aria-label="观察特殊情况"><button id="cancel" type="button">相互抵消</button><button id="zero" type="button">含零向量</button></div>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <div class="readout" aria-live="polite" aria-atomic="true"><p><span class="a">a</span><output id="a-value"></output></p><p><span class="b">b</span><output id="b-value"></output></p><p class="sum result"><strong>a + b</strong><output id="sum-value"></output></p></div>
+        <p id="observation" class="observation"></p>
+      </section>
+    </div>
+    <section class="reading"><h2>试着这样观察</h2><p>先沿蓝色实线走到 a 的终点，再沿棕色虚线前进。然后交换顺序。两条路径是否到达同一个点？将一个分量调成负数，观察两段位移如何部分抵消。</p>
+      <details><summary>连接到分量公式</summary><p>设 a、b 的两个分量分别表示横向、纵向位移。首尾相接就是把每个方向的位移分别相加：</p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>=</mo><mo>(</mo><msub><mi>a</mi><mi>x</mi></msub><mo>+</mo><msub><mi>b</mi><mi>x</mi></msub><mo>,</mo><msub><mi>a</mi><mi>y</mi></msub><mo>+</mo><msub><mi>b</mi><mi>y</mi></msub><mo>)</mo></mrow></math><p>平移副本仍表示同一个向量。若两段位移完全抵消，结果是没有方向的零向量。</p></details>
+      <p class="muted small">默认数值由本项目选择。教材定位、推导和验证见 <a href="README.md">实验说明</a>；默认插图可 <a href="figure.svg">独立查看</a> 或保存为 SVG。</p>
+    </section>
+  </main>
+  <footer>Static + Interactive · 先观察，再连接数学表达</footer>
+  <noscript><p>交互需要 JavaScript。仍可查看 <a href="figure.svg">静态插图</a>。</p></noscript>
+</body>
+</html>
